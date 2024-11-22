@@ -65,9 +65,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.__clientidsecretname__ }}
-          tenant-id: ${{ secrets.__tenantidsecretname__ }}
-          subscription-id: ${{ secrets.__subscriptionidsecretname__ }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EF8EFDAF202449959BF79D2BCB4B86F4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_16F0E7532A92487483600A6DDB1CD042 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_70F26B61060946309F804C01F27293C9 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -75,3 +75,4 @@ jobs:
         with:
           app-name: 'applhello'
           slot-name: 'Production'
+          
